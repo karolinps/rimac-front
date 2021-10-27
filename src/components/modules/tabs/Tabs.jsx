@@ -1,4 +1,5 @@
 import React from "react";
+import Collapse from "@modules/collapse/Collapse";
 import { WrapperTabStyled, TabStyled } from "./TabsStyles";
 
 const Tabs = () => {
@@ -41,13 +42,7 @@ const Tabs = () => {
           );
         })}
       </WrapperTabStyled>
-      {tab === 0 ? (
-        <p>0</p>
-      ) : tab === 1 ? (
-        <p>1</p>
-      ) : tab === 2 ? (
-        <p>2</p>
-      ) : null}
+      <Collapse />
     </>
   );
 };
