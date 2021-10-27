@@ -15,12 +15,12 @@ export const CenterStyled = styled.div`
 `;
 export const RightStyled = styled.div``;
 
-export const WrapperFlex = styled.div`
+export const WrapperFlexStyled = styled.div`
   display: flex;
   align-items: center;
 `;
 
-const TitleWelcome = styled.p`
+const TitleWelcomeStyled = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
@@ -31,16 +31,16 @@ const TitleWelcome = styled.p`
   margin: 0.5em 0 0.2em;
 `;
 
-export const TitleGreetings = styled(TitleWelcome)`
+export const TitleGreetingStyled = styled(TitleWelcomeStyled)`
   color: #494f66;
 `;
 
-export const TitleName = styled(TitleWelcome)`
+export const TitleNameStyled = styled(TitleWelcomeStyled)`
   color: #ef3340;
   margin-left: 0.2em;
 `;
 
-export const BodyGreetings = styled.p`
+export const BodyGreetingStyled = styled.p`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -50,9 +50,9 @@ export const BodyGreetings = styled.p`
   margin: 0;
 `;
 
-export const BodyIndicateTheSum = styled.div``;
+export const BodyIndicateTheSumStyled = styled.div``;
 
-export const TitleIndicateTheSum = styled.p`
+export const TitleIndicateTheSumStyled = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
@@ -64,21 +64,21 @@ export const TitleIndicateTheSum = styled.p`
   color: #494f66;
 `;
 
-export const TitleMinAndMax = styled(TitleIndicateTheSum)`
+export const TitleMinAndMaxStyled = styled(TitleIndicateTheSumStyled)`
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: #676f8f;
   font-size: 12px;
 `;
 
-export const DividerVertical = styled.div`
+export const DividerVerticalStyled = styled.div`
   width: 1px;
   height: 16px;
   background: #e4e8f7;
   margin: 0 0.5em;
 `;
 
-export const DividerHorizontal = styled.div`
+export const DividerHorizontalStyled = styled.div`
   width: 384px;
   height: 1px;
   background: #e4e8f7;

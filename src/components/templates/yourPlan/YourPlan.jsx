@@ -7,16 +7,16 @@ import {
   WrapperStyled,
   LeftStyled,
   RightStyled,
-  TitleGreetings,
-  TitleName,
-  WrapperFlex,
-  BodyGreetings,
+  TitleGreetingStyled,
+  TitleNameStyled,
+  WrapperFlexStyled,
+  BodyGreetingStyled,
   CenterStyled,
-  BodyIndicateTheSum,
-  TitleIndicateTheSum,
-  TitleMinAndMax,
-  DividerVertical,
-  DividerHorizontal,
+  BodyIndicateTheSumStyled,
+  TitleIndicateTheSumStyled,
+  TitleMinAndMaxStyled,
+  DividerVerticalStyled,
+  DividerHorizontalStyled,
 } from "./YourPlanStyles";
 import ButtonCounter from "@modules/buttonCounter/ButtonCounter";
 
@@ -24,27 +24,32 @@ const YourPlan = () => {
   const SectionWelcome = () => {
     return (
       <>
-        <WrapperFlex>
-          <TitleGreetings>¡Hola,</TitleGreetings> <TitleName> Juan!</TitleName>
-        </WrapperFlex>
-        <BodyGreetings>Conoce las coberturas para tu plan</BodyGreetings>
+        <WrapperFlexStyled>
+          <TitleGreetingStyled>¡Hola,</TitleGreetingStyled>
+          <TitleNameStyled> Juan!</TitleNameStyled>
+        </WrapperFlexStyled>
+        <BodyGreetingStyled>
+          Conoce las coberturas para tu plan
+        </BodyGreetingStyled>
       </>
     );
   };
 
   const SectionIndicateTheSum = () => {
     return (
-      <WrapperFlex style={{ justifyContent: "space-between" }}>
-        <BodyIndicateTheSum>
-          <TitleIndicateTheSum>Indica la suma asegurada</TitleIndicateTheSum>
-          <WrapperFlex>
-            <TitleMinAndMax>MIN $12,500</TitleMinAndMax>
-            <DividerVertical />
-            <TitleMinAndMax>MAX $16,500</TitleMinAndMax>
-          </WrapperFlex>
-        </BodyIndicateTheSum>
+      <WrapperFlexStyled style={{ justifyContent: "space-between" }}>
+        <BodyIndicateTheSumStyled>
+          <TitleIndicateTheSumStyled>
+            Indica la suma asegurada
+          </TitleIndicateTheSumStyled>
+          <WrapperFlexStyled>
+            <TitleMinAndMaxStyled>MIN $12,500</TitleMinAndMaxStyled>
+            <DividerVerticalStyled />
+            <TitleMinAndMaxStyled>MAX $16,500</TitleMinAndMaxStyled>
+          </WrapperFlexStyled>
+        </BodyIndicateTheSumStyled>
         <ButtonCounter />
-      </WrapperFlex>
+      </WrapperFlexStyled>
     );
   };
 
@@ -58,7 +63,7 @@ const YourPlan = () => {
         <SectionWelcome />
         <Card />
         <SectionIndicateTheSum />
-        <DividerHorizontal />
+        <DividerHorizontalStyled />
       </CenterStyled>
       <RightStyled></RightStyled>
     </WrapperStyled>
