@@ -11,4 +11,5 @@ export const LeftStyled = styled.div`
 `;
 export const RightStyled = styled.div`
   display: block;
+  margin: 2em 4em;
 `;

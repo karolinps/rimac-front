@@ -1,10 +1,10 @@
 import Layout from "@components/layouts/Layout";
-import SingIn from "@pages/SingIn";
+import ArmYourPlan from "./pages/ArmYourPlan";
 
 function App() {
   return (
     <Layout>
-      <SingIn />
+      <ArmYourPlan />
     </Layout>
   );
 }

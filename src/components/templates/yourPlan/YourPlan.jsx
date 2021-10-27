@@ -1,5 +1,6 @@
 import React from "react";
 import Step from "@modules/step/Step";
+import BackPage from "@modules/backPage/BackPage";
 
 import { WrapperStyled, LeftStyled, RightStyled } from "./YourPlanStyles";
 
@@ -9,7 +10,9 @@ const YourPlan = () => {
       <LeftStyled>
         <Step />
       </LeftStyled>
-      <RightStyled></RightStyled>
+      <RightStyled>
+        <BackPage />
+      </RightStyled>
     </WrapperStyled>
   );
 };
