@@ -4,7 +4,7 @@ export const WrapperStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2em 8em;
+  margin: 1em 8em;
   z-index: 9999;
   position: relative;
   @media (max-width: 991px) {
