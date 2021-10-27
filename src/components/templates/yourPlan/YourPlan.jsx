@@ -1,7 +1,13 @@
 import React from "react";
+
+import { MdOutlineDone } from "react-icons/md";
+
 import Step from "@modules/step/Step";
 import BackPage from "@modules/backPage/BackPage";
 import Card from "@modules/card/Card";
+import ButtonCounter from "@modules/buttonCounter/ButtonCounter";
+
+import Button from "@elements/Button";
 
 import {
   WrapperStyled,
@@ -17,10 +23,19 @@ import {
   TitleMinAndMaxStyled,
   DividerVerticalStyled,
   DividerHorizontalStyled,
+  TitlePriceStyled,
+  TitleAmountStyled,
+  DescriptionStyled,
+  AmountAndPriceStyled,
 } from "./YourPlanStyles";
-import ButtonCounter from "@modules/buttonCounter/ButtonCounter";
 
 const YourPlan = () => {
+  const listOption = [
+    { name: "Llanta de respuesto" },
+    { name: "Analisis de motor" },
+    { name: "Aros gratis" },
+  ];
+
   const SectionWelcome = () => {
     return (
       <>
@@ -53,6 +68,35 @@ const YourPlan = () => {
     );
   };
 
+  const SectionAmountAndPrice = () => {
+    return (
+      <AmountAndPriceStyled>
+        <TitleAmountStyled>Monto</TitleAmountStyled>
+        <TitlePriceStyled>$35.00</TitlePriceStyled>
+        <DescriptionStyled>mensuales</DescriptionStyled>
+        <DividerHorizontalStyled style={{ width: 224, margin: "1.5em 0" }} />
+        <TitleIndicateTheSumStyled
+          style={{ textAlign: "left", marginBottom: "0.5em" }}
+        >
+          El precio incluye:
+        </TitleIndicateTheSumStyled>
+        {listOption.map((el, i) => {
+          return (
+            <WrapperFlexStyled key={i} style={{ padding: "0.5em 0" }}>
+              <MdOutlineDone style={{ color: "#43B748" }} />
+              <DescriptionStyled style={{ fontSize: 14, marginLeft: "1.5em" }}>
+                {el.name}
+              </DescriptionStyled>
+            </WrapperFlexStyled>
+          );
+        })}
+        <Button height="48px" width="224px">
+          Lo quiero
+        </Button>
+      </AmountAndPriceStyled>
+    );
+  };
+
   return (
     <WrapperStyled>
       <LeftStyled>
@@ -65,7 +109,9 @@ const YourPlan = () => {
         <SectionIndicateTheSum />
         <DividerHorizontalStyled />
       </CenterStyled>
-      <RightStyled></RightStyled>
+      <RightStyled>
+        <SectionAmountAndPrice />
+      </RightStyled>
     </WrapperStyled>
   );
 };
