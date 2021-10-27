@@ -6,6 +6,7 @@ import Step from "@modules/step/Step";
 import BackPage from "@modules/backPage/BackPage";
 import Card from "@modules/card/Card";
 import ButtonCounter from "@modules/buttonCounter/ButtonCounter";
+import Tabs from "@modules/tabs/Tabs";
 
 import Button from "@elements/Button";
 
@@ -27,6 +28,7 @@ import {
   TitleAmountStyled,
   DescriptionStyled,
   AmountAndPriceStyled,
+  TitleCoverageStyled,
 } from "./YourPlanStyles";
 
 const YourPlan = () => {
@@ -97,6 +99,15 @@ const YourPlan = () => {
     );
   };
 
+  const SectionAddOrRemoveCoverage = () => {
+    return (
+      <>
+        <TitleCoverageStyled>Agrega o quita coberturas</TitleCoverageStyled>
+        <Tabs />
+      </>
+    );
+  };
+
   return (
     <WrapperStyled>
       <LeftStyled>
@@ -108,6 +119,7 @@ const YourPlan = () => {
         <Card />
         <SectionIndicateTheSum />
         <DividerHorizontalStyled />
+        <SectionAddOrRemoveCoverage />
       </CenterStyled>
       <RightStyled>
         <SectionAmountAndPrice />

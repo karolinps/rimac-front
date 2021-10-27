@@ -111,3 +111,7 @@ export const AmountAndPriceStyled = styled.div`
     margin-top: 1.5em;
   }
 `;
+
+export const TitleCoverageStyled = styled(TitlePather)`
+  font-size: 20px;
+`;
