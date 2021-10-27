@@ -12,6 +12,7 @@ import {
   BodyGreetings,
   CenterStyled,
 } from "./YourPlanStyles";
+import Card from "@modules/card/Card";
 
 const YourPlan = () => {
   const SectionWelcome = () => {
@@ -32,6 +33,7 @@ const YourPlan = () => {
       <CenterStyled>
         <BackPage />
         <SectionWelcome />
+        <Card />
       </CenterStyled>
       <RightStyled></RightStyled>
     </WrapperStyled>

@@ -13,7 +13,7 @@ export const CircleIconStyled = styled.div`
   border-radius: 50%;
   text-align: center;
   color: #ef3340;
-  line-height: 26px;
+  line-height: 28px;
 `;
 
 export const TitleBack = styled.p`
