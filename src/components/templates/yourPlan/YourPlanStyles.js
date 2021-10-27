@@ -15,8 +15,9 @@ export const CenterStyled = styled.div`
 `;
 export const RightStyled = styled.div``;
 
-export const WrapperTitleWelcome = styled.div`
+export const WrapperFlex = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 const TitleWelcome = styled.p`
@@ -47,4 +48,39 @@ export const BodyGreetings = styled.p`
   line-height: 28px;
   color: #676f8f;
   margin: 0;
+`;
+
+export const BodyIndicateTheSum = styled.div``;
+
+export const TitleIndicateTheSum = styled.p`
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  margin: 0;
+  color: #494f66;
+`;
+
+export const TitleMinAndMax = styled(TitleIndicateTheSum)`
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #676f8f;
+  font-size: 12px;
+`;
+
+export const DividerVertical = styled.div`
+  width: 1px;
+  height: 16px;
+  background: #e4e8f7;
+  margin: 0 0.5em;
+`;
+
+export const DividerHorizontal = styled.div`
+  width: 384px;
+  height: 1px;
+  background: #e4e8f7;
+  margin: 2.5em 0;
 `;
