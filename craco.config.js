@@ -9,6 +9,7 @@ module.exports = {
       "@assets": path.resolve(__dirname, "src/assets"),
       "@templates": path.resolve(__dirname, "src/components/templates"),
       "@pages": path.resolve(__dirname, "src/pages"),
+      "@modules": path.resolve(__dirname, "src/components/modules"),
     },
   },
 };
