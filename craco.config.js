@@ -11,6 +11,7 @@ module.exports = {
       "@pages": path.resolve(__dirname, "src/pages"),
       "@modules": path.resolve(__dirname, "src/components/modules"),
       "@utils": path.resolve(__dirname, "src/utils"),
+      "@lib": path.resolve(__dirname, "src/lib"),
     },
   },
 };
