@@ -16,6 +16,7 @@ import {
   TitleRedStyled,
   StrongStyled,
 } from "./ThankYouStyles";
+import Footer from "../../layouts/Footer";
 
 const Login = () => {
   const TopBannerMobile = () => {
@@ -27,23 +28,27 @@ const Login = () => {
   };
 
   return (
-    <WrapperStyled>
-      <LeftStyled>
-        <ImageStyled src={menFinallyDesktop} alt="men" />
-      </LeftStyled>
-      <TopBannerMobile />
-      <RightStyled>
-        <TitleRedStyled>¡Te damos la bienvenida!</TitleRedStyled>
-        <TitleGrayStyled>
-          Cuenta con nosotros para proteger tu vehículo
-        </TitleGrayStyled>
-        <DescriptionStyled>
-          Enviaremos la confirmación de compra de tu Plan Vehícular Tracking a
-          tu correo: <StrongStyled>joel.sanchez@gmail.com</StrongStyled>
-        </DescriptionStyled>
-        <Button width="255px">cómo usar mi seguro</Button>
-      </RightStyled>
-    </WrapperStyled>
+    <>
+      <WrapperStyled>
+        <LeftStyled>
+          <ImageStyled src={menFinallyDesktop} alt="men" />
+        </LeftStyled>
+        <TopBannerMobile />
+        <RightStyled>
+          <TitleRedStyled>¡Te damos la bienvenida!</TitleRedStyled>
+          <TitleGrayStyled>
+            Cuenta con nosotros para proteger tu vehículo
+          </TitleGrayStyled>
+          <DescriptionStyled>
+            Enviaremos la confirmación de compra de tu Plan Vehícular Tracking a
+            tu correo:
+          </DescriptionStyled>
+          <StrongStyled>joel.sanchez@gmail.com</StrongStyled>
+          <Button width="255px">cómo usar mi seguro</Button>
+        </RightStyled>
+      </WrapperStyled>
+      <Footer />
+    </>
   );
 };
 

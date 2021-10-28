@@ -73,6 +73,6 @@ export const DescriptionStyled = styled.p`
   margin-bottom: 1em;
 `;
 
-export const StrongStyled = styled.p`
+export const StrongStyled = styled(DescriptionStyled)`
   font-weight: bold;
 `;
