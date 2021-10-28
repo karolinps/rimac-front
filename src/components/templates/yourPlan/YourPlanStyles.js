@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const WrapperStyled = styled.div`
   display: flex;
+  border-top: 1px solid #e4e8f7;
 `;
 
 export const LeftStyled = styled.div`
