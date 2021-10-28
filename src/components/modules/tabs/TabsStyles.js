@@ -18,4 +18,7 @@ export const TabStyled = styled.div`
   text-align: center;
   width: 94px;
   cursor: pointer;
+  @media (min-width: 481px) and (max-width: 991px) {
+    width: 100%;
+  }
 `;
