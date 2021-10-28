@@ -146,6 +146,11 @@ export const DescriptionStyled = styled(BodyDescription)`
   font-size: 12px;
   line-height: 20px;
   color: #676f8f;
+  @media (max-width: 991px) {
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-size: 10px;
+  }
 `;
 
 export const AmountAndPriceStyled = styled.div`
@@ -162,5 +167,20 @@ export const TitleCoverageStyled = styled(TitlePather)`
   font-size: 20px;
   @media (max-width: 991px) {
     padding: 0 1.5em;
+  }
+`;
+
+export const WrapperMobileAmountAndPriceStyled = styled.div`
+  margin-top: 5em;
+  padding: 0 2em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (min-width: 992px) {
+    display: none;
+  }
+  button {
+    width: 168px;
   }
 `;

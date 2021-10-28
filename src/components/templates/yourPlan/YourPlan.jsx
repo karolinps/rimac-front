@@ -33,6 +33,7 @@ import {
   WrapperWelcomeStyled,
   WrappetMinAndMaxStyled,
   TitleLookCoverageStyled,
+  WrapperMobileAmountAndPriceStyled,
 } from "./YourPlanStyles";
 
 const YourPlan = () => {
@@ -104,6 +105,20 @@ const YourPlan = () => {
     );
   };
 
+  const SectionAmountAndPriceMobile = () => {
+    return (
+      <WrapperMobileAmountAndPriceStyled>
+        <div>
+          <TitlePriceStyled>$35.00</TitlePriceStyled>
+          <DescriptionStyled>mensual</DescriptionStyled>
+        </div>
+        <div>
+          <Button height="48px">Lo quiero</Button>
+        </div>
+      </WrapperMobileAmountAndPriceStyled>
+    );
+  };
+
   const SectionAddOrRemoveCoverage = () => {
     return (
       <>
@@ -128,6 +143,7 @@ const YourPlan = () => {
         <SectionIndicateTheSum />
         <DividerHorizontalStyled />
         <SectionAddOrRemoveCoverage />
+        <SectionAmountAndPriceMobile />
       </CenterStyled>
       <RightStyled>
         <SectionAmountAndPrice />
