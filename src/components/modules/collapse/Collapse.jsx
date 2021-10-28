@@ -20,7 +20,6 @@ import iconPerdidaTotalSVG from "@assets/icons/icon_perdidatotal.svg";
 import {
   MdKeyboardArrowUp,
   MdKeyboardArrowDown,
-  MdAddCircleOutline,
   MdRemoveCircleOutline,
 } from "react-icons/md";
 

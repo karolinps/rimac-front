@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const WrapperStyled = styled.div`
   display: flex;
   margin: 3em 8em;
+  @media (max-width: 991px) {
+    display: none;
+  }
 `;
 
 export const LeftStyled = styled.div``;

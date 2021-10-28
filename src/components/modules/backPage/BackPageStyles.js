@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const WrapperStyled = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 991px) {
+    display: none;
+  }
 `;
 
 export const CircleIconStyled = styled.div`

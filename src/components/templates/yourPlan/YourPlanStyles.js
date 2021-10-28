@@ -7,16 +7,33 @@ export const WrapperStyled = styled.div`
 export const LeftStyled = styled.div`
   width: 408px;
   background: #f7f8fc;
+  @media (max-width: 991px) {
+    display: none;
+  }
 `;
 export const CenterStyled = styled.div`
   display: block;
   margin: 2em 5em;
+  @media (max-width: 991px) {
+    margin: auto;
+  }
 `;
 export const RightStyled = styled.div``;
 
 export const WrapperFlexStyled = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 991px) {
+    display: grid;
+  }
+`;
+
+export const WrapperWelcomeStyled = styled.div`
+  display: block;
+  @media (max-width: 991px) {
+    background: #f7f8fc;
+    padding: 2em 1em;
+  }
 `;
 const TitlePather = styled.p`
   font-family: Lato;
@@ -26,15 +43,29 @@ const TitlePather = styled.p`
   margin: 0;
 `;
 
+export const TitleLookCoverageStyled = styled(TitlePather)`
+  @media (min-width: 992px) {
+    display: none;
+  }
+  font-size: 28px;
+  margin-bottom: 0.5em;
+`;
+
 const TitleWelcomeStyled = styled(TitlePather)`
   font-size: 40px;
   line-height: 48px;
   letter-spacing: -0.6px;
   margin: 0.5em 0 0.2em;
+  @media (max-width: 991px) {
+    display: none;
+  }
 `;
 
 export const TitleGreetingStyled = styled(TitleWelcomeStyled)`
   color: #494f66;
+  @media (max-width: 991px) {
+    display: none;
+  }
 `;
 
 export const TitleNameStyled = styled(TitleWelcomeStyled)`
@@ -53,7 +84,11 @@ export const BodyGreetingStyled = styled(BodyDescription)`
   color: #676f8f;
 `;
 
-export const BodyIndicateTheSumStyled = styled.div``;
+export const BodyIndicateTheSumStyled = styled.div`
+  @media (max-width: 991px) {
+    display: block;
+  }
+`;
 
 export const TitleIndicateTheSumStyled = styled(TitlePather)`
   font-size: 16px;
@@ -61,6 +96,10 @@ export const TitleIndicateTheSumStyled = styled(TitlePather)`
   text-align: center;
   letter-spacing: 0.2px;
   margin: 0;
+`;
+export const WrappetMinAndMaxStyled = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const TitleMinAndMaxStyled = styled(TitleIndicateTheSumStyled)`
@@ -108,6 +147,9 @@ export const AmountAndPriceStyled = styled.div`
   margin: 10em 0;
   button {
     margin-top: 1.5em;
+  }
+  @media (max-width: 991px) {
+    display: none;
   }
 `;
 

@@ -7,6 +7,7 @@ import BackPage from "@modules/backPage/BackPage";
 import Card from "@modules/card/Card";
 import ButtonCounter from "@modules/buttonCounter/ButtonCounter";
 import Tabs from "@modules/tabs/Tabs";
+import StepMobile from "@modules/step/StepMobile";
 
 import Button from "@elements/Button";
 
@@ -29,6 +30,9 @@ import {
   DescriptionStyled,
   AmountAndPriceStyled,
   TitleCoverageStyled,
+  WrapperWelcomeStyled,
+  WrappetMinAndMaxStyled,
+  TitleLookCoverageStyled,
 } from "./YourPlanStyles";
 
 const YourPlan = () => {
@@ -44,6 +48,7 @@ const YourPlan = () => {
         <WrapperFlexStyled>
           <TitleGreetingStyled>¡Hola,</TitleGreetingStyled>
           <TitleNameStyled> Juan!</TitleNameStyled>
+          <TitleLookCoverageStyled>Mira las coberturas</TitleLookCoverageStyled>
         </WrapperFlexStyled>
         <BodyGreetingStyled>
           Conoce las coberturas para tu plan
@@ -59,11 +64,11 @@ const YourPlan = () => {
           <TitleIndicateTheSumStyled>
             Indica la suma asegurada
           </TitleIndicateTheSumStyled>
-          <WrapperFlexStyled>
+          <WrappetMinAndMaxStyled>
             <TitleMinAndMaxStyled>MIN $12,500</TitleMinAndMaxStyled>
             <DividerVerticalStyled />
             <TitleMinAndMaxStyled>MAX $16,500</TitleMinAndMaxStyled>
-          </WrapperFlexStyled>
+          </WrappetMinAndMaxStyled>
         </BodyIndicateTheSumStyled>
         <ButtonCounter />
       </WrapperFlexStyled>
@@ -115,8 +120,11 @@ const YourPlan = () => {
       </LeftStyled>
       <CenterStyled>
         <BackPage />
-        <SectionWelcome />
-        <Card />
+        <StepMobile />
+        <WrapperWelcomeStyled>
+          <SectionWelcome />
+          <Card />
+        </WrapperWelcomeStyled>
         <SectionIndicateTheSum />
         <DividerHorizontalStyled />
         <SectionAddOrRemoveCoverage />
