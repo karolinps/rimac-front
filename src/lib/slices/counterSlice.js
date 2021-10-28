@@ -12,7 +12,7 @@ export const counterSlice = createSlice({
       if (state.total < 16500) state.total += 100;
     },
     decrement: (state) => {
-      if (state.total > 12600) state.total -= 100;
+      if (state.total > 12500) state.total -= 100;
     },
   },
 });
