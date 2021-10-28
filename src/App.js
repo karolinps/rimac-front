@@ -4,6 +4,7 @@ import SingIn from "@pages/SingIn";
 import Thanks from "@pages/Thanks";
 import ArmYourPlan from "@pages/ArmYourPlan";
 import PublicRoute from "@utils/PublicRoute";
+import ProtectedRoute from "@utils/ProtectedRoute";
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
       <Switch>
         <PublicRoute path="/login" exact component={SingIn} />
         <PublicRoute path="/" exact component={SingIn} />
-        <PublicRoute path="/your-plan" exact component={ArmYourPlan} />
-        <PublicRoute path="/thanks" exact component={Thanks} />{" "}
+        <ProtectedRoute path="/your-plan" exact component={ArmYourPlan} />
+        <ProtectedRoute path="/thanks" exact component={Thanks} />{" "}
         <Redirect to="/login" />
       </Switch>
     </BrowserRouter>
