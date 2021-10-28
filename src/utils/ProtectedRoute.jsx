@@ -9,7 +9,6 @@ const ProtectedRoute = ({ component: Component, ...rest }) => {
   if (!Component) {
     return null;
   }
-  console.log(plate);
   return (
     <Route
       {...rest}

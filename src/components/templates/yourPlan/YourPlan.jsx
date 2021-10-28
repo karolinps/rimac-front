@@ -42,6 +42,7 @@ import { fetchByUserThunk } from "@lib/slices/authSlice";
 const YourPlan = () => {
   const { push } = useHistory();
   const { name } = useSelector((state) => state.auth.currentUser);
+  const { amount } = useSelector((state) => state.coverage);
   const dispatch = useDispatch();
 
   const listOption = [
@@ -52,7 +53,7 @@ const YourPlan = () => {
 
   React.useEffect(() => {
     dispatch(fetchByUserThunk(3));
-  }, [dispatch, name]);
+  }, [dispatch, name, amount]);
 
   const SectionWelcome = () => {
     return (
@@ -94,7 +95,7 @@ const YourPlan = () => {
     return (
       <AmountAndPriceStyled>
         <TitleAmountStyled>Monto</TitleAmountStyled>
-        <TitlePriceStyled>$35.00</TitlePriceStyled>
+        <TitlePriceStyled>${amount}.00</TitlePriceStyled>
         <DescriptionStyled>mensuales</DescriptionStyled>
         <DividerHorizontalStyled style={{ width: 224, margin: "1.5em 0" }} />
         <TitleIndicateTheSumStyled
@@ -124,7 +125,7 @@ const YourPlan = () => {
     return (
       <WrapperMobileAmountAndPriceStyled>
         <div>
-          <TitlePriceStyled>$35.00</TitlePriceStyled>
+          <TitlePriceStyled>${amount}.00</TitlePriceStyled>
           <DescriptionStyled>mensual</DescriptionStyled>
         </div>
         <div>
