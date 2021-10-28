@@ -1,15 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = ({ children }) => {
-  return <ButtonCustom>{children}</ButtonCustom>;
+const Button = ({ children, height, width }) => {
+  return (
+    <ButtonCustom height={height} width={width}>
+      {children}
+    </ButtonCustom>
+  );
 };
 
 export default Button;
 
-const ButtonCustom = styled.button`
-  width: 192px;
-  height: 56px;
+const ButtonCustom = styled.button.attrs((props) => ({
+  width: props.width || "192px",
+  height: props.height || "56px",
+}))`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   background: #ef3340;
   border-radius: 8px;
   border: none;

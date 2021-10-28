@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const WrapperStyled = styled.div`
   display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   @media (max-width: 991px) {
     display: grid;
   }
@@ -18,8 +23,12 @@ export const RightStyled = styled.div`
   display: block;
   margin: 0 auto;
   margin-top: 10em;
-  @media (max-width: 991px) {
-    margin-top: auto;
+
+  @media (max-width: 576px) {
+    margin-top: 1em;
+  }
+  @media (min-width: 577px) and (max-width: 991px) {
+    margin-top: -4em;
   }
 `;
 
@@ -37,9 +46,17 @@ export const ImageStyled = styled.img`
 
 export const FormStyled = styled.div`
   display: grid;
-  @media (max-width: 991px) {
+  @media (max-width: 320px) {
     max-width: 320px;
-    width: 315px;
+    width: 290px;
+  }
+  @media (min-width: 321px) and (max-width: 767px) {
+    max-width: 320px;
+    width: 320px;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    max-width: 550px;
+    width: 550px;
   }
 `;
 
@@ -116,6 +133,9 @@ export const BodyBannerMobileStyled = styled.div`
   line-height: 36px;
   top: 2em;
   position: relative;
+  @media (min-width: 480px) and (max-width: 991px) {
+    padding: 0 5.5em;
+  }
 `;
 
 export const NewStyled = styled.p`

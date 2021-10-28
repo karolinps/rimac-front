@@ -4,16 +4,17 @@ export const WrapperStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 2em 8em;
+  margin: 1em 8em;
+  z-index: 9999;
+  position: relative;
+  height: 64px;
   @media (max-width: 991px) {
-    margin: 1em 2em;
+    margin: 0px 1em;
+    height: 56px;
   }
 `;
 
-export const ImageStyled = styled.img``;
+export const LogoStyled = styled.img``;
 
 export const LeftStyled = styled.div``;
 

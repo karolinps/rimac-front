@@ -5,18 +5,18 @@ import {
   WrapperStyled,
   LeftStyled,
   RightStyled,
-  ImageStyled,
+  LogoStyled,
   PhoneStyled,
   NumberPhoneStyled,
   CallUsStyled,
-  SubTitleStyled
+  SubTitleStyled,
 } from "./HeaderStyles";
 
 const Header = () => {
   return (
     <WrapperStyled>
       <LeftStyled>
-        <ImageStyled src={logo} lt="logo" />
+        <LogoStyled src={logo} lt="logo" />
       </LeftStyled>
       <RightStyled>
         <SubTitleStyled>¿Tienes alguna duda?</SubTitleStyled>
