@@ -1,6 +1,7 @@
 import React from "react";
 
 import { MdOutlineDone } from "react-icons/md";
+import { useHistory } from "react-router-dom";
 
 import Step from "@modules/step/Step";
 import BackPage from "@modules/backPage/BackPage";
@@ -37,6 +38,8 @@ import {
 } from "./YourPlanStyles";
 
 const YourPlan = () => {
+  const { push } = useHistory();
+
   const listOption = [
     { name: "Llanta de respuesto" },
     { name: "Analisis de motor" },
@@ -76,6 +79,9 @@ const YourPlan = () => {
     );
   };
 
+  const iWant = () => {
+    push("/thanks");
+  };
   const SectionAmountAndPrice = () => {
     return (
       <AmountAndPriceStyled>
@@ -98,7 +104,7 @@ const YourPlan = () => {
             </WrapperFlexStyled>
           );
         })}
-        <Button height="48px" width="224px">
+        <Button height="48px" width="224px" onClick={iWant}>
           Lo quiero
         </Button>
       </AmountAndPriceStyled>

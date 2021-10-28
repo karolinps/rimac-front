@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = ({ children, height, width }) => {
+const Button = ({ children, height, width, onClick }) => {
   return (
-    <ButtonCustom height={height} width={width}>
+    <ButtonCustom height={height} width={width} onClick={onClick}>
       {children}
     </ButtonCustom>
   );

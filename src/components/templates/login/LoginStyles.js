@@ -44,7 +44,7 @@ export const ImageStyled = styled.img`
   }
 `;
 
-export const FormStyled = styled.div`
+export const FormStyled = styled.form`
   display: grid;
   @media (max-width: 320px) {
     max-width: 320px;

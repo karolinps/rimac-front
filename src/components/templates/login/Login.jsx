@@ -27,8 +27,10 @@ import {
   TextStyled,
   FooterButtonStyled,
 } from "./LoginStyles";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
+  const { push } = useHistory();
   const TopBannerMobile = () => {
     return (
       <BannerMobileStyled>
@@ -45,6 +47,9 @@ const Login = () => {
     );
   };
 
+  const login = () => {
+    push("/your-plan");
+  };
   return (
     <WrapperStyled>
       <LeftStyled>
@@ -52,7 +57,7 @@ const Login = () => {
       </LeftStyled>
       <TopBannerMobile />
       <RightStyled>
-        <FormStyled>
+        <FormStyled onSubmit={login}>
           <TitleStyled>Déjanos tus datos</TitleStyled>
           <FlexSelectInputStyled>
             <Select />
@@ -73,7 +78,7 @@ const Login = () => {
             </TextStyled>
           </SectionCheckBoxStyled>
           <FooterButtonStyled>
-            <Button>COTÍZALO</Button>
+            <Button type="submit">COTÍZALO</Button>
           </FooterButtonStyled>
         </FormStyled>
       </RightStyled>
