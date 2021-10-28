@@ -10,6 +10,9 @@ export const LeftStyled = styled.div`
   @media (max-width: 991px) {
     display: none;
   }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    width: 250px;
+  }
 `;
 export const CenterStyled = styled.div`
   display: block;
@@ -17,6 +20,9 @@ export const CenterStyled = styled.div`
   @media (max-width: 991px) {
     margin: auto;
     width: 100%;
+  }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    margin: 2em 4em;
   }
 `;
 export const RightStyled = styled.div``;

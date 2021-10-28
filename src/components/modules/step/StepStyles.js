@@ -6,6 +6,9 @@ export const WrapperStyled = styled.div`
   @media (max-width: 991px) {
     display: none;
   }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    margin: 3em;
+  }
 `;
 
 export const LeftStyled = styled.div``;
