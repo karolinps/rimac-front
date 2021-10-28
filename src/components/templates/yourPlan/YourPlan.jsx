@@ -105,6 +105,7 @@ const YourPlan = () => {
     );
   };
 
+  //Mobile
   const SectionAmountAndPriceMobile = () => {
     return (
       <WrapperMobileAmountAndPriceStyled>
@@ -135,7 +136,9 @@ const YourPlan = () => {
       </LeftStyled>
       <CenterStyled>
         <BackPage />
+        {/*Init Mobile*/}
         <StepMobile />
+        {/*Finish Mobile*/}
         <WrapperWelcomeStyled>
           <SectionWelcome />
           <Card />
@@ -143,7 +146,9 @@ const YourPlan = () => {
         <SectionIndicateTheSum />
         <DividerHorizontalStyled />
         <SectionAddOrRemoveCoverage />
+        {/*Init Mobile*/}
         <SectionAmountAndPriceMobile />
+        {/*Finish Mobile*/}
       </CenterStyled>
       <RightStyled>
         <SectionAmountAndPrice />
