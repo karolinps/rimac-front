@@ -13,6 +13,7 @@ import {
   TextAddOrRemoveStyled,
   TextLookMoreOrLessStyled,
   WrapperFlexStyled,
+  ShowIconDesktopStyled,
 } from "./CollapseStyles";
 
 import iconTheftSVG from "@assets/icons/icon_theft.svg";
@@ -24,6 +25,8 @@ import {
   MdKeyboardArrowDown,
   MdRemoveCircleOutline,
 } from "react-icons/md";
+
+import Switch from "@elements/Switch";
 
 const Collapse = () => {
   const [showHide, setShowHide] = React.useState(false);
@@ -65,25 +68,28 @@ const Collapse = () => {
                 <TitleStyled>{el.name}</TitleStyled>
               </LeftStyled>
               <RightStyled>
-                {showHide[i] ? (
-                  <MdKeyboardArrowUp
-                    style={{
-                      color: "#EF3340",
-                      fontSize: 20,
-                      cursor: "pointer",
-                    }}
-                    onClick={() => showHideCollapse(i, 1)}
-                  />
-                ) : (
-                  <MdKeyboardArrowDown
-                    style={{
-                      color: "#EF3340",
-                      fontSize: 20,
-                      cursor: "pointer",
-                    }}
-                    onClick={() => showHideCollapse(i, 2)}
-                  />
-                )}
+                <Switch />
+                <ShowIconDesktopStyled>
+                  {showHide[i] ? (
+                    <MdKeyboardArrowUp
+                      style={{
+                        color: "#EF3340",
+                        fontSize: 20,
+                        cursor: "pointer",
+                      }}
+                      onClick={() => showHideCollapse(i, 1)}
+                    />
+                  ) : (
+                    <MdKeyboardArrowDown
+                      style={{
+                        color: "#EF3340",
+                        fontSize: 20,
+                        cursor: "pointer",
+                      }}
+                      onClick={() => showHideCollapse(i, 2)}
+                    />
+                  )}
+                </ShowIconDesktopStyled>
               </RightStyled>
             </HeaderCollapseStyled>
             <AddOrRemoveStyled>

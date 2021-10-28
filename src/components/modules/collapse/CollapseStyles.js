@@ -56,20 +56,20 @@ export const TitleStyled = styled.p`
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  line-height: 28px;
+  line-height: 22px;
   color: #494f66;
   width: 255px;
+  @media (max-width: 991px) {
+    width: auto;
+    font-size: 16px;
+  }
 `;
 
 export const LeftStyled = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 `;
-export const RightStyled = styled.div`
-  @media (max-width: 991px) {
-    display: none;
-  }
-`;
+export const RightStyled = styled.div``;
 
 export const AddOrRemoveStyled = styled.div`
   display: flex;
@@ -103,6 +103,12 @@ export const TextLookMoreOrLessStyled = styled(Text)`
   font-size: 10px;
   color: #a3abcc;
   @media (min-width: 992px) {
+    display: none;
+  }
+`;
+
+export const ShowIconDesktopStyled = styled.div`
+  @media (max-width: 991px) {
     display: none;
   }
 `;
