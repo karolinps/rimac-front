@@ -1,18 +1,20 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import Layout from "@components/layouts/Layout";
+import { useSelector } from "react-redux";
 
 const PublicRoute = ({ component: Component, restricted, ...rest }) => {
+  const { plate } = useSelector((state) => state.auth.user);
+
   if (!Component) {
     return null;
   }
-  const token = 123;
 
   return (
     <Route
       {...rest}
       render={(props) =>
-        token && restricted ? (
+        plate && restricted ? (
           <Redirect to={"/your-plan"} />
         ) : (
           <Layout>
