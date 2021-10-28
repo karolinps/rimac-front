@@ -7,8 +7,10 @@ export const WrapperStyled = styled.div`
   margin: 1em 8em;
   z-index: 9999;
   position: relative;
+  height: 64px;
   @media (max-width: 991px) {
-    margin: 1em 2em;
+    margin: 0px 1em;
+    height: 56px;
   }
 `;
 

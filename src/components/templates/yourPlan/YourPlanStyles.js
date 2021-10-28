@@ -16,6 +16,7 @@ export const CenterStyled = styled.div`
   margin: 2em 5em;
   @media (max-width: 991px) {
     margin: auto;
+    width: 100%;
   }
 `;
 export const RightStyled = styled.div``;
@@ -24,7 +25,7 @@ export const WrapperFlexStyled = styled.div`
   display: flex;
   align-items: center;
   @media (max-width: 991px) {
-    display: grid;
+    display: block;
   }
 `;
 
@@ -87,6 +88,7 @@ export const BodyGreetingStyled = styled(BodyDescription)`
 export const BodyIndicateTheSumStyled = styled.div`
   @media (max-width: 991px) {
     display: block;
+    padding: 2em;
   }
 `;
 
@@ -96,6 +98,9 @@ export const TitleIndicateTheSumStyled = styled(TitlePather)`
   text-align: center;
   letter-spacing: 0.2px;
   margin: 0;
+  @media (max-width: 991px) {
+    text-align: left;
+  }
 `;
 export const WrappetMinAndMaxStyled = styled.div`
   display: flex;
@@ -155,4 +160,7 @@ export const AmountAndPriceStyled = styled.div`
 
 export const TitleCoverageStyled = styled(TitlePather)`
   font-size: 20px;
+  @media (max-width: 991px) {
+    padding: 0 1.5em;
+  }
 `;

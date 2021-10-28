@@ -2,6 +2,19 @@ import styled from "styled-components";
 
 export const WrapperCollapseStyled = styled.div`
   display: block;
+  @media (max-width: 991px) {
+    padding: 0 2em;
+  }
+`;
+
+export const WrapperFlexStyled = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0.5em 0;
+  margin-left: 4.5em;
+  @media (min-width: 992px) {
+    display: none;
+  }
 `;
 
 export const CardCollapseStyled = styled.div`
@@ -14,6 +27,9 @@ export const HeaderCollapseStyled = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-bottom: 1em;
+  @media (max-width: 991px) {
+    padding-bottom: 0;
+  }
 `;
 export const BodyCollapseStyled = styled.div`
   font-family: Roboto;
@@ -24,7 +40,12 @@ export const BodyCollapseStyled = styled.div`
   color: #676f8f;
   width: 279px;
   margin: 0 auto;
-  padding: 1.5em 0;
+  padding-bottom: 1.5em;
+  @media (max-width: 991px) {
+    width: 240px;
+    margin-left: 5em;
+    padding: 0.2em 0;
+  }
 `;
 
 export const IconStyled = styled.img``;
@@ -44,7 +65,11 @@ export const LeftStyled = styled.div`
   display: flex;
   align-items: center;
 `;
-export const RightStyled = styled.div``;
+export const RightStyled = styled.div`
+  @media (max-width: 991px) {
+    display: none;
+  }
+`;
 
 export const AddOrRemoveStyled = styled.div`
   display: flex;
@@ -52,16 +77,32 @@ export const AddOrRemoveStyled = styled.div`
   width: 279px;
   margin: 0 auto;
   cursor: pointer;
+  margin: 0.2em auto 1.5em;
+  @media (max-width: 991px) {
+    display: none;
+  }
 `;
 
-export const TextAddOrRemoveStyled = styled.div`
+const Text = styled.p`
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+  margin: 0;
+`;
+
+export const TextAddOrRemoveStyled = styled(Text)`
+  font-size: 12px;
   color: #6f7dff;
   margin-left: 1em;
+`;
+
+export const TextLookMoreOrLessStyled = styled(Text)`
+  font-size: 10px;
+  color: #a3abcc;
+  @media (min-width: 992px) {
+    display: none;
+  }
 `;

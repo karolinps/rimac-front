@@ -10,6 +10,10 @@ export const WrapperStyled = styled.div`
   justify-content: space-evenly;
   align-items: center;
   color: #6f7dff;
+  @media (max-width: 991px) {
+    width: 85%;
+    margin: 0 auto;
+  }
 `;
 
 export const LeftStyled = styled.div``;
@@ -21,7 +25,7 @@ export const CenterStyled = styled.div`
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.2px;
-  color: #494F66;
+  color: #494f66;
 `;
 
 export const RightStyled = styled.div``;

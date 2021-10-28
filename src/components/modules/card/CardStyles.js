@@ -9,9 +9,10 @@ export const WrapperCardStyled = styled.div`
   width: 384px;
   margin: 3.5em 0;
   display: flex;
+  justify-content: space-around;
   @media (max-width: 991px) {
     border: none;
-    width: 340px;
+    width: 100%;
     margin: 1.5em 0;
   }
 `;

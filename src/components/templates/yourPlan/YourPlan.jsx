@@ -48,8 +48,8 @@ const YourPlan = () => {
         <WrapperFlexStyled>
           <TitleGreetingStyled>¡Hola,</TitleGreetingStyled>
           <TitleNameStyled> Juan!</TitleNameStyled>
-          <TitleLookCoverageStyled>Mira las coberturas</TitleLookCoverageStyled>
         </WrapperFlexStyled>
+        <TitleLookCoverageStyled>Mira las coberturas</TitleLookCoverageStyled>
         <BodyGreetingStyled>
           Conoce las coberturas para tu plan
         </BodyGreetingStyled>

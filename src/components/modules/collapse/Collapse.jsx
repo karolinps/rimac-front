@@ -11,6 +11,8 @@ import {
   BodyCollapseStyled,
   AddOrRemoveStyled,
   TextAddOrRemoveStyled,
+  TextLookMoreOrLessStyled,
+  WrapperFlexStyled,
 } from "./CollapseStyles";
 
 import iconTheftSVG from "@assets/icons/icon_theft.svg";
@@ -98,8 +100,30 @@ const Collapse = () => {
                 una plaza medio-grande y dejo donde siempre la bici atada con
                 una pitón a un sitio de esos de poner las bicis y mucho más
               </BodyCollapseStyled>
+            ) : null}
+            {/*mobile*/}
+            {showHide[i] ? (
+              <WrapperFlexStyled onClick={() => showHideCollapse(i, 1)}>
+                <TextLookMoreOrLessStyled>ver menos</TextLookMoreOrLessStyled>
+                <MdKeyboardArrowUp
+                  style={{
+                    color: "#6F7DFF",
+                    fontSize: 20,
+                    cursor: "pointer",
+                  }}
+                />
+              </WrapperFlexStyled>
             ) : (
-              <BodyCollapseStyled />
+              <WrapperFlexStyled onClick={() => showHideCollapse(i, 2)}>
+                <TextLookMoreOrLessStyled>ver mas</TextLookMoreOrLessStyled>
+                <MdKeyboardArrowDown
+                  style={{
+                    color: "#6F7DFF",
+                    fontSize: 20,
+                    cursor: "pointer",
+                  }}
+                />
+              </WrapperFlexStyled>
             )}
           </CardCollapseStyled>
         );
