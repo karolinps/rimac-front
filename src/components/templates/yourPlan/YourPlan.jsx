@@ -36,9 +36,13 @@ import {
   TitleLookCoverageStyled,
   WrapperMobileAmountAndPriceStyled,
 } from "./YourPlanStyles";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchByUserThunk } from "@lib/slices/authSlice";
 
 const YourPlan = () => {
   const { push } = useHistory();
+  const { name } = useSelector((state) => state.auth.currentUser);
+  const dispatch = useDispatch();
 
   const listOption = [
     { name: "Llanta de respuesto" },
@@ -46,12 +50,16 @@ const YourPlan = () => {
     { name: "Aros gratis" },
   ];
 
+  React.useEffect(() => {
+    dispatch(fetchByUserThunk(3));
+  }, [dispatch, name]);
+
   const SectionWelcome = () => {
     return (
       <>
         <WrapperFlexStyled>
           <TitleGreetingStyled>¡Hola,</TitleGreetingStyled>
-          <TitleNameStyled> Juan!</TitleNameStyled>
+          <TitleNameStyled> {name}!</TitleNameStyled>
         </WrapperFlexStyled>
         <TitleLookCoverageStyled>Mira las coberturas</TitleLookCoverageStyled>
         <BodyGreetingStyled>
@@ -120,7 +128,9 @@ const YourPlan = () => {
           <DescriptionStyled>mensual</DescriptionStyled>
         </div>
         <div>
-          <Button height="48px">Lo quiero</Button>
+          <Button height="48px" onClick={iWant}>
+            Lo quiero
+          </Button>
         </div>
       </WrapperMobileAmountAndPriceStyled>
     );
