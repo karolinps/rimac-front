@@ -26,6 +26,7 @@ export const RightStyled = styled.div`
 
   @media (max-width: 576px) {
     margin-top: 1em;
+    padding-bottom: 2em;
   }
   @media (min-width: 577px) and (max-width: 991px) {
     margin-top: -4em;
@@ -44,7 +45,7 @@ export const ImageStyled = styled.img`
   }
 `;
 
-export const FormStyled = styled.div`
+export const FormStyled = styled.form`
   display: grid;
   @media (max-width: 320px) {
     max-width: 320px;

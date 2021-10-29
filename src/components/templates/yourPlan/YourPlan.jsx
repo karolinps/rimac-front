@@ -1,6 +1,7 @@
 import React from "react";
 
 import { MdOutlineDone } from "react-icons/md";
+import { useHistory } from "react-router-dom";
 
 import Step from "@modules/step/Step";
 import BackPage from "@modules/backPage/BackPage";
@@ -35,20 +36,31 @@ import {
   TitleLookCoverageStyled,
   WrapperMobileAmountAndPriceStyled,
 } from "./YourPlanStyles";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchByUserThunk } from "@lib/slices/authSlice";
 
 const YourPlan = () => {
+  const { push } = useHistory();
+  const { name } = useSelector((state) => state.auth.currentUser);
+  const { amount } = useSelector((state) => state.coverage);
+  const dispatch = useDispatch();
+
   const listOption = [
     { name: "Llanta de respuesto" },
     { name: "Analisis de motor" },
     { name: "Aros gratis" },
   ];
 
+  React.useEffect(() => {
+    dispatch(fetchByUserThunk(3));
+  }, [dispatch, name, amount]);
+
   const SectionWelcome = () => {
     return (
       <>
         <WrapperFlexStyled>
           <TitleGreetingStyled>¡Hola,</TitleGreetingStyled>
-          <TitleNameStyled> Juan!</TitleNameStyled>
+          <TitleNameStyled> {name}!</TitleNameStyled>
         </WrapperFlexStyled>
         <TitleLookCoverageStyled>Mira las coberturas</TitleLookCoverageStyled>
         <BodyGreetingStyled>
@@ -76,11 +88,14 @@ const YourPlan = () => {
     );
   };
 
+  const iWant = () => {
+    push("/thanks");
+  };
   const SectionAmountAndPrice = () => {
     return (
       <AmountAndPriceStyled>
         <TitleAmountStyled>Monto</TitleAmountStyled>
-        <TitlePriceStyled>$35.00</TitlePriceStyled>
+        <TitlePriceStyled>${amount}.00</TitlePriceStyled>
         <DescriptionStyled>mensuales</DescriptionStyled>
         <DividerHorizontalStyled style={{ width: 224, margin: "1.5em 0" }} />
         <TitleIndicateTheSumStyled
@@ -98,7 +113,7 @@ const YourPlan = () => {
             </WrapperFlexStyled>
           );
         })}
-        <Button height="48px" width="224px">
+        <Button height="48px" width="224px" onClick={iWant}>
           Lo quiero
         </Button>
       </AmountAndPriceStyled>
@@ -110,11 +125,13 @@ const YourPlan = () => {
     return (
       <WrapperMobileAmountAndPriceStyled>
         <div>
-          <TitlePriceStyled>$35.00</TitlePriceStyled>
+          <TitlePriceStyled>${amount}.00</TitlePriceStyled>
           <DescriptionStyled>mensual</DescriptionStyled>
         </div>
         <div>
-          <Button height="48px">Lo quiero</Button>
+          <Button height="48px" onClick={iWant}>
+            Lo quiero
+          </Button>
         </div>
       </WrapperMobileAmountAndPriceStyled>
     );

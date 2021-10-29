@@ -16,9 +16,18 @@ import {
   TitleRedStyled,
   StrongStyled,
 } from "./ThankYouStyles";
-import Footer from "../../layouts/Footer";
+import Footer from "@components/layouts/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchByUserThunk } from "@lib/slices/authSlice";
 
-const Login = () => {
+const ThankYou = () => {
+  const { email } = useSelector((state) => state.auth.currentUser);
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    dispatch(fetchByUserThunk(3));
+  }, [dispatch, email]);
+
   const TopBannerMobile = () => {
     return (
       <BannerMobileStyled>
@@ -43,7 +52,7 @@ const Login = () => {
             Enviaremos la confirmación de compra de tu Plan Vehícular Tracking a
             tu correo:
           </DescriptionStyled>
-          <StrongStyled>joel.sanchez@gmail.com</StrongStyled>
+          <StrongStyled>{email}</StrongStyled>
           <Button width="255px">cómo usar mi seguro</Button>
         </RightStyled>
       </WrapperStyled>
@@ -52,4 +61,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ThankYou;

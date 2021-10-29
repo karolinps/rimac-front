@@ -27,8 +27,21 @@ import {
   TextStyled,
   FooterButtonStyled,
 } from "./LoginStyles";
+import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setAuth } from "@lib/slices/authSlice";
 
 const Login = () => {
+  const { push } = useHistory();
+  const dispatch = useDispatch();
+  const { plate } = useSelector((state) => state.auth.user);
+
+  const [datos, setDatos] = React.useState({
+    nro_doc: "",
+    phone: "",
+    plate: "",
+  });
+
   const TopBannerMobile = () => {
     return (
       <BannerMobileStyled>
@@ -45,6 +58,18 @@ const Login = () => {
     );
   };
 
+  React.useEffect(() => {
+    if (plate) push("/your-plan");
+  }, [plate, push]);
+
+  const handleChange = (e) => {
+    setDatos({ ...datos, [e.target.name]: e.target.value });
+  };
+  const login = (e) => {
+    e.preventDefault();
+    dispatch(setAuth(datos));
+  };
+
   return (
     <WrapperStyled>
       <LeftStyled>
@@ -52,14 +77,29 @@ const Login = () => {
       </LeftStyled>
       <TopBannerMobile />
       <RightStyled>
-        <FormStyled>
+        <FormStyled onSubmit={login}>
           <TitleStyled>Déjanos tus datos</TitleStyled>
           <FlexSelectInputStyled>
             <Select />
-            <Input placeholder="Nro. de doc" />
+            <Input
+              placeholder="Nro. de doc"
+              value={datos.nro_doc}
+              onChange={handleChange}
+              name="nro_doc"
+            />
           </FlexSelectInputStyled>
-          <Input placeholder="Celular" />
-          <Input placeholder="Placa" />
+          <Input
+            placeholder="Celular"
+            value={datos.phone}
+            onChange={handleChange}
+            name="phone"
+          />
+          <Input
+            placeholder="Placa"
+            value={datos.plate}
+            onChange={handleChange}
+            name="plate"
+          />
           <SectionCheckBoxStyled>
             <CheckBox />
             <TextStyled>
@@ -73,7 +113,7 @@ const Login = () => {
             </TextStyled>
           </SectionCheckBoxStyled>
           <FooterButtonStyled>
-            <Button>COTÍZALO</Button>
+            <Button type="submit">COTÍZALO</Button>
           </FooterButtonStyled>
         </FormStyled>
       </RightStyled>
