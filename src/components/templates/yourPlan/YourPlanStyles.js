@@ -23,7 +23,7 @@ export const CenterStyled = styled.div`
     width: 100%;
   }
   @media (min-width: 992px) and (max-width: 1200px) {
-    margin: 2em 4em;
+    margin: 2em 3em;
   }
 `;
 export const RightStyled = styled.div``;

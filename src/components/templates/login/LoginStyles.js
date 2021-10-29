@@ -26,6 +26,7 @@ export const RightStyled = styled.div`
 
   @media (max-width: 576px) {
     margin-top: 1em;
+    padding-bottom: 2em;
   }
   @media (min-width: 577px) and (max-width: 991px) {
     margin-top: -4em;
