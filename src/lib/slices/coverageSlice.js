@@ -8,12 +8,15 @@ export const coverageSlice = createSlice({
   name: "coverage",
   initialState,
   reducers: {
-    setAuth: (state, { payload }) => {
-      state.user = payload;
+    addAmount: (state, { payload }) => {
+      state.amount += payload;
+    },
+    removeAmount: (state, { payload }) => {
+      state.amount -= payload;
     },
   },
 });
 
-export const { setAuth } = coverageSlice.actions;
+export const { addAmount, removeAmount } = coverageSlice.actions;
 
 export default coverageSlice.reducer;
