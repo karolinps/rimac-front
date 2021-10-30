@@ -24,24 +24,30 @@ import {
   MdKeyboardArrowUp,
   MdKeyboardArrowDown,
   MdRemoveCircleOutline,
+  MdAddCircleOutline,
 } from "react-icons/md";
 
 import Switch from "@elements/Switch";
 
 const Collapse = () => {
   const [showHide, setShowHide] = React.useState(false);
+  const [arrayCoverage, setArrayCoverage] = React.useState([]);
+
   const listCoverages = [
     {
       name: "Llanta robada",
       icon: iconTheftSVG,
+      amount: 15,
     },
     {
       name: "Choque y/o pasarte la luz roja ",
       icon: iconDamagetSVG,
+      amount: 20,
     },
     {
       name: "Atropello en la vía Evitamiento ",
       icon: iconPerdidaTotalSVG,
+      amount: 50,
     },
   ];
 
@@ -57,6 +63,19 @@ const Collapse = () => {
     }
   };
 
+  const addOrRemoveCoverage = (i, iamount) => {
+    if (arrayCoverage.includes(i)) {
+      setArrayCoverage((prevSelected) =>
+        arrayCoverage.filter((el) => el !== i)
+      );
+    } else {
+      setArrayCoverage((prevSelected) => [...prevSelected, i]);
+    }
+  };
+
+  /*Llanta robada= $15.00
+Choque y/o pasartre la luz roja = $20.00
+Atrolpello en vía Evitamiento = $50.00*/
   return (
     <WrapperCollapseStyled>
       {listCoverages.map((el, i) => {
@@ -92,12 +111,26 @@ const Collapse = () => {
                 </ShowIconDesktopStyled>
               </RightStyled>
             </HeaderCollapseStyled>
-            <AddOrRemoveStyled>
-              <MdRemoveCircleOutline
-                style={{ color: "#939DFF", opacity: "0.6", fontSize: 20 }}
-              />
-              <TextAddOrRemoveStyled>quitar</TextAddOrRemoveStyled>
-            </AddOrRemoveStyled>
+            {arrayCoverage.includes(i) ? (
+              <AddOrRemoveStyled
+                onClick={() => addOrRemoveCoverage(i, el.amount)}
+              >
+                <MdRemoveCircleOutline
+                  style={{ color: "#939DFF", opacity: "0.6", fontSize: 20 }}
+                />
+                <TextAddOrRemoveStyled>quitar</TextAddOrRemoveStyled>
+              </AddOrRemoveStyled>
+            ) : (
+              <AddOrRemoveStyled
+                onClick={() => addOrRemoveCoverage(i, el.amount)}
+              >
+                <MdAddCircleOutline
+                  style={{ color: "#939DFF", opacity: "0.6", fontSize: 20 }}
+                />
+                <TextAddOrRemoveStyled>agregar</TextAddOrRemoveStyled>
+              </AddOrRemoveStyled>
+            )}
+
             {showHide[i] ? (
               <BodyCollapseStyled>
                 He salido de casa a las cuatro menos cinco para ir a la academia
