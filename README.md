@@ -1,12 +1,12 @@
 Este proyecto esta creado con [React](https://github.com/facebook/create-react-app).
 
-# Pasos para iniciar con el proyecto
+Pasos para iniciar con el proyecto
 
-### Correr `npm i o npm install` (Por las lib usadas)
+Correr `npm i o npm install` (Por las lib usadas)
 
-### `npm start`
+`npm start`
 
-## Estructura de carpetas
+Estructura de carpetas
 
 La estructura de carpetas y archivos a seguir en el proyecto.
 
@@ -43,13 +43,13 @@ components:
 - templates: Es la unión de varios modules y son como el resultado de una vista de la aplicación, las conexiones al redux se pueden realizar aqui sin ningún incoveniente y pueden pasar estos valores como props a los modules.
 - layouts: aqui se alojarán los templates que definen la distribución de los elementos en la aplicación, ej: CommonLayout.tsx posee sidebar, header, footer y recibe main content como children, seria el contenido de esa vista.
 
-# Librerías
+Librerías
 
 Las librerías usadas en la aplicación son las siguientes:
 
 ### [Redux/toolkit][redux/toolkit]
 
-Redux es una biblioteca y a la vez una serie de patrones que nos permiten gestionar el estado global de nuestra aplicación.
+Redux es una biblioteca que nos permiten manejar el estado global de nuestra aplicación.
 Redux Toolkit nos permite dividir cada funcionalidad en un segmento de características y, a medida que se agregan más y más características, podemos acceder a cada "segmento" de datos.
 Toolkit nos brinda las siguientes herramientas que utilizaremos en el proyecto.
 
@@ -96,7 +96,6 @@ Cátalogo de fuentes
 [react-icons]: https://react-icons.github.io/react-icons/ "React Icons"
 [fontsource]: https://fontsource.org/ "Fontsource"
 
-
 El desarrollo del proyecto empezó:
 
 - Instalación y configuración del mismo (paquetes básicos).
@@ -108,4 +107,4 @@ El desarrollo del proyecto empezó:
 - Se definió un slice - reducer de auth para la autenticación del usuario, es mismo state es usado en las rutas privadas y publicas-restringidas.
 - Lógica en "Arma tu plan" haciendo uso de reducer esto en relacion al contador y agregar o quitar cobertura.
 
-Nota: La api suministrada no da endpoint de logueo, lo que hice fue pasar un id (1-10) seteado para poder filtrar y mostrar la data de un usuario y asi mostrar el nombre en "arma tu plan" y el email en la "pagina de gracias"
+Nota: La api suministrada no da endpoint de logueo, lo que hice fue pasar un id (1-10) seteado para poder filtrar y mostrar la data de un usuario haciendo uso de un Thunk (createAsyncThunk) y un effect y asi mostrar el nombre en "arma tu plan" y el email en la "pagina de gracias"
